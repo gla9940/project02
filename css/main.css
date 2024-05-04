@@ -135,14 +135,14 @@
 }
 
 .color {
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .hover {
   color: #000;
 }
 
-.lang2{
+.lang2 {
   border-right: 2px solid #000;
   border-bottom: 2px solid #000;
 }
@@ -217,6 +217,32 @@
   animation: active-menu-bar-02 .75s forwards;
 }
 
+.allmenu {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.allmenu .bg{
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/allmenu_bg.jpg)no-repeat center / cover;
+  border-radius: 0%;
+  transition: all 0.85s ease;
+  transform: translateY(0);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #main-visual {
   height: 100vh;
 }
@@ -239,7 +265,7 @@
     display: block;
     width: 100%;
   }
-  
+
   #header h1 a {
     width: 130px;
     height: 30px;
@@ -258,15 +284,15 @@
     transition: all 0.5s;
     transform: scale(0);
   }
-  
+
   header .gnb>li:hover>a::before {
     transform: scale(1);
   }
-  
+
   header .header-wrap nav {
     height: 100%;
   }
-  
+
   header .header-wrap .gnb {
     height: 100%;
     display: flex;
@@ -274,29 +300,29 @@
     margin-left: 100px;
     padding: 0 50px;
   }
-  
+
   header .header-wrap .gnb>li {
     height: calc(100% + 1px);
     position: relative;
     margin: 0 auto;
   }
-  
+
   header .header-wrap .gnb>li>a {
     position: relative;
     height: calc(100% + 1px);
     display: flex;
     transition: 0.3s;
     font-family: 'Poppins';
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 400;
     align-items: center;
   }
-  
+
   header .lnb {
     position: relative;
     display: block;
   }
-  
+
   header .dep2-bg {
     display: block;
     position: absolute;
@@ -304,54 +330,48 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     width: 100%;
     transition: all 0.5s;
   }
-  
+
   header .dep2 {
     position: absolute;
     display: flex;
     width: 100vw;
   }
-  
+
   header .dep2 li {
     margin-right: 30px;
   }
-  
+
   header .dep2 li a {
     font-size: 16px;
     line-height: 80px;
     position: relative;
   }
-  
+
   header .dep2 li a:hover {
     color: #FF1725;
   }
-  
+
 
   #header .utill {
     display: flex;
     align-items: center;
     height: 90px;
-    margin-right: 30px; 
+    margin-right: 30px;
   }
 
   .utill .lang {
     margin-right: 20px;
   }
-  
-  
+
+
   .utill .lang .kr {
     right: 5px;
   }
 
-  header .header-wrap .gnb>li>a {
-    height: calc(100% + 1px);
-    font-size: 16px;
-    font-weight: 400;
-    align-items: center;
-  }
 }
 
 

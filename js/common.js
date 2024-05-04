@@ -7,11 +7,11 @@ $(document).ready(function () { //start
   $(".gnb>li").on("mouseenter focusin", function () {
     $('header').addClass('color');
     $('.gnb>li>a').addClass('hover');
-    $('.dep2>li>a').addClass('hover');
+    $('header .dep2>li>a').addClass('hover');
     $('.lang>a').addClass('hover');
     $('.lang-list>li>a').addClass('hover');
     $('.menu-trigger span').css({
-      "background-color": "#888",
+      "background-color": "#000",
     });
     $('.utill .lang .icon').css({
       "background-image": "url(../img/lang_icon_b.png)",
@@ -30,7 +30,7 @@ $(document).ready(function () { //start
   $("header").on("mouseleave focusout ", function () {
     $('header').removeClass('color');
     $('.gnb>li>a').removeClass('hover');
-    $('.dep2>li>a').removeClass('hover');
+    $('header .dep2>li>a').removeClass('hover');
     $('.lang>a').removeClass('hover');
     $('.lang-list>li>a').removeClass('hover');
     $('.menu-trigger span').css({
