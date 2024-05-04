@@ -47,7 +47,7 @@
   z-index: 1;
 }
 
-#header h1 a{
+#header h1 a {
   width: 180px;
   height: 30px;
   display: block;
@@ -55,12 +55,12 @@
   position: absolute;
   top: 35px;
   z-index: 10;
-  
+
 }
 
 
 #header nav {
-  width: 100%;
+  display: none;
 }
 
 #header nav .gnb {
@@ -116,10 +116,9 @@ header .header-wrap .gnb>li>a {
   font-size: 22px;
   font-weight: 400;
   align-items: center;
-  height:;
 }
 
-header .lnb{
+header .lnb {
   position: relative;
   display: block;
 }
@@ -131,38 +130,38 @@ header .dep2-bg {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.7);
   width: 100%;
   transition: all 0.5s;
 }
 
-header .dep2{
+header .dep2 {
   position: absolute;
   display: flex;
   width: 100vw;
 }
 
-header .dep2 li{
+header .dep2 li {
   margin-right: 80px;
 }
 
-header .dep2 li a{
+header .dep2 li a {
   font-size: 16px;
   line-height: 80px;
   position: relative;
 }
 
-header .dep2 li a:hover{
+header .dep2 li a:hover {
   color: #FF1725;
 }
 
-.utill .lang{
-position: relative;
-margin-right: 50px;
+.utill .lang {
+  position: relative;
+  margin-right: 50px;
 }
 
 
-.utill .lang .icon{
+.utill .lang .icon {
   position: absolute;
   left: -30px;
   top: 3px;
@@ -172,25 +171,71 @@ margin-right: 50px;
   background: url(../img/lang_icon.png)no-repeat center / 16px;
 }
 
-.utill .lang-list{
-  display: none;
+.utill .lang .kr {
+  display: block;
+  position: relative;
+  padding: 0 20px;
+  font-size: 16px;
+  right: 5px;
 }
 
-.color{
-  background-color: #fff;
+.utill .lang .kr:after {
+  display: block;
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 8px;
+  top: 5px;
 }
 
-.hover{
+.utill .lang-list {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  margin: 10px 0 0;
+}
+
+.utill .lang-list li {
+  margin-bottom: 5px;
+}
+
+.utill .lang-list li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 30px;
+  background: #fff;
+  border-radius: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.color {
+  background-color: rgba(255,255,255,0.8);
+}
+
+.hover {
   color: #000;
 }
 
+.lang2{
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
 
-#header .utill{
+
+#header .utill {
   display: flex;
   align-items: center;
 }
 
-#header .ham{
+#header .ham {
   margin-top: 2px;
 }
 
@@ -229,35 +274,55 @@ margin-right: 50px;
 }
 
 .menu-trigger span:nth-of-type(1) {
-  animation : menu-bar-01 .75s forwards;
+  animation: menu-bar-01 .75s forwards;
 }
 
 .menu-trigger span:nth-of-type(2) {
-  transition : all .25s .25s;
-  opacity : 1;
+  transition: all .25s .25s;
+  opacity: 1;
 }
+
 .menu-trigger span:nth-of-type(3) {
-  animation : menu-bar-02 .75s forwards;
+  animation: menu-bar-02 .75s forwards;
 }
 
 .menu-trigger.active span:nth-of-type(1) {
-  animation : active-menu-bar-01 .75s forwards;
+  animation: active-menu-bar-01 .75s forwards;
 }
 
 .menu-trigger.active span:nth-of-type(2) {
-  opacity : 0;
-}
-.menu-trigger.active span:nth-of-type(3) {
-  animation : active-menu-bar-02 .75s forwards;
+  opacity: 0;
 }
 
-#main-visual{
+.menu-trigger.active span:nth-of-type(3) {
+  animation: active-menu-bar-02 .75s forwards;
+}
+
+#main-visual {
   height: 100vh;
 }
 
-#main-visual video{
+#main-visual video {
   object-fit: cover;
   object-position: bottom;
 }
 
 
+
+/*-----------------모바일 끝------------------*/
+
+
+
+
+@media screen and (min-width:768px) {
+
+  #header nav {
+    display: block;
+  }
+}
+
+
+@media screen and (min-width:1024px) {}
+
+
+@media screen and (min-width:1280px) {}

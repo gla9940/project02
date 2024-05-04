@@ -22,6 +22,7 @@ $(document).ready(function () { //start
     $('header .dep2-bg').css({
       "height": "80px",
     });
+    
     //$('header .header-mask').stop().fadeIn();
   });
 
@@ -95,6 +96,17 @@ $(document).ready(function () { //start
   $(".gnb .menu5").mouseleave(function () {
     $(".gnb .sub5").hide();
   });
+
+  langchk = 0;
+	$(".lang").click(function(){
+		if(langchk == 0){
+			$(this).find(".lang-list").slideDown();
+			langchk = 1;
+		}else{
+			$(this).find(".lang-list").slideUp();
+			langchk = 0;
+		}
+	});
 
 
 
