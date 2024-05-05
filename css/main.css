@@ -169,6 +169,7 @@
   position: relative;
   width: 25px;
   height: 22px;
+  z-index: 9999;
 }
 
 .menu-trigger span {
@@ -228,19 +229,71 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: translateY(100%);
+  transition: all 800ms cubic-bezier(.8, 0, .33, 1);
 }
 
-.allmenu .bg{
+.allmenu .bg {
   width: 100vw;
   height: 100vh;
   background: url(../img/allmenu_bg.jpg)no-repeat center / cover;
   border-radius: 0%;
-  transition: all 0.85s ease;
-  transform: translateY(0);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  display: block;
+}
+
+.allmenu .inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.allmenu .dep2 {
+  width: 100%;
+}
+
+.allmenu .dep2 li {
+  margin: 10px 0;
+}
+
+.allmenu .dep2 li a {
+  font-size: 17px;
+  color: #666;
+}
+
+.allgnb{
+  width: 100%;
+}
+
+
+.allgnb>li {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0;
+  transition: all 3s;
+}
+
+.allgnb>li>a {
+  display: block;
+  color: #000;
+  font-weight: 600;
+}
+
+.allgnb>li.act>a {
+  color: #FF1725;
+}
+
+.allgnb>li.active>ul {
+  display: block;
+}
+
+.allmenu.open {
+  transform: translateY(0);
 }
 
 #main-visual {
@@ -318,7 +371,7 @@
     align-items: center;
   }
 
-  header .lnb {
+  header .gnb .lnb {
     position: relative;
     display: block;
   }
@@ -335,23 +388,23 @@
     transition: all 0.5s;
   }
 
-  header .dep2 {
+  header .gnb .dep2 {
     position: absolute;
     display: flex;
     width: 100vw;
   }
 
-  header .dep2 li {
+  header .gnb .dep2 li {
     margin-right: 30px;
   }
 
-  header .dep2 li a {
+  header .gnb .dep2 li a {
     font-size: 16px;
     line-height: 80px;
     position: relative;
   }
 
-  header .dep2 li a:hover {
+  header .gnb .dep2 li a:hover {
     color: #FF1725;
   }
 
@@ -395,7 +448,37 @@
     font-size: 22px;
   }
 
-  header .dep2 li {
+  header .gnb .dep2 li {
     margin-right: 50px;
   }
+
+  .allmenu .inner {
+    width: 1280px;
+  }
+
+  .allmenu .bg {
+    width: 100vw;
+    height: 100vw;
+    background: #e2e2e2 url(../img/allmenu_bg.jpg)no-repeat center / cover;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    transition: all 0.85s ease;
+  }
+
+  .allmenu .allgnb {
+    width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .allmenu .allgnb li {
+    width: 33%;
+    margin: 50px 0;
+    text-align: left;
+  }
+
+
 }

@@ -1,5 +1,16 @@
 $(document).ready(function () { //start
 
+  $(window).resize(function(){
+		windowWidth = $(window).width();
+		if(windowWidth < 1280){
+			$('body').removeClass('pc');
+			$('body').addClass('mobile');
+		}else{
+			$('body').addClass('pc');
+			$('body').removeClass('mobile');
+		}
+	}).resize();
+
 
 
   //헤더
@@ -22,7 +33,7 @@ $(document).ready(function () { //start
     $('header .dep2-bg').css({
       "height": "80px",
     });
-    
+
     //$('header .header-mask').stop().fadeIn();
   });
 
@@ -97,16 +108,20 @@ $(document).ready(function () { //start
     $(".gnb .sub5").hide();
   });
 
+  // 언어버튼
+
+  $(".lang-list").hide();
+
   langchk = 0;
-	$(".lang").click(function(){
-		if(langchk == 0){
-			$(this).find(".lang-list").slideDown();
-			langchk = 1;
-		}else{
-			$(this).find(".lang-list").slideUp();
-			langchk = 0;
-		}
-	});
+  $(".lang").click(function () {
+    if (langchk == 0) {
+      $(this).find(".lang-list").slideDown();
+      langchk = 1;
+    } else {
+      $(this).find(".lang-list").slideUp();
+      langchk = 0;
+    }
+  });
 
 
 
@@ -122,6 +137,38 @@ $(document).ready(function () { //start
       $(this).toggleClass('active');
     })
   });
+
+  //allmenu
+
+  chkNum = 0;
+	$(".menu-trigger").click(function(){
+		
+		if(chkNum==0){
+			$(".allmenu").addClass("open");
+			chkNum = 1;
+		}else{		
+      $(".allmenu").removeClass("open");
+			chkNum = 0;
+  }
+});
+
+  
+
+
+  $(".allgnb>li>ul").hide();
+
+  $(document).on("click",".allgnb>li",function(){
+		if($(this).attr("class") == "act"){			
+			$(this).find("ul").slideUp();			
+		}else{
+			$(this).find("ul").slideDown();			
+		}		
+		$(this).toggleClass("act");
+		$(this).siblings("li").removeClass("act");		
+		$(this).siblings("li").find("ul").slideUp();		
+
+	})
+
 
 
 
