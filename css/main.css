@@ -319,7 +319,7 @@
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  width: 95%;
+  width: 90%;
   color: #fff;
 }
 
@@ -334,9 +334,15 @@
   margin-bottom: 10px;
 }
 
+#main-visual .txt-box span{
+  display: block;
+  word-break: keep-all;
+  line-height: 2;
+}
+
 #main-visual  .more {
   position: absolute;
-  top: 450px;
+  top: 480px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -557,6 +563,8 @@
   #main-visual  .more {
     top: 500px;
   }
+
+
 
 }
 
