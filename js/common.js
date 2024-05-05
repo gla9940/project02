@@ -12,7 +12,6 @@ $(document).ready(function () { //start
 	}).resize();
 
 
-
   //헤더
 
   $(".gnb>li").on("mouseenter focusin", function () {
@@ -168,6 +167,17 @@ $(document).ready(function () { //start
 		$(this).siblings("li").find("ul").slideUp();		
 
 	})
+
+   var swiper = new Swiper(".business", {
+      slidesPerView: 1.3,
+      spaceBetween: 1,
+      centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
 
 
 
