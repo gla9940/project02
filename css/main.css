@@ -315,7 +315,7 @@
 
 #main-visual .txt-box {
   position: absolute;
-  top: 250px;
+  top: 200px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -327,7 +327,7 @@
   font-family: 'Poppins';
   font-size: 32px;
   font-weight: 300;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 #main-visual .txt-box p {
@@ -339,7 +339,7 @@
 }
 
 #main-visual .txt-box .more {
-  margin-top: 250px;
+  margin-top: 200px;
 }
 
 .more {
