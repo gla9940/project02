@@ -311,7 +311,6 @@
 #main-visual video {
   object-fit: cover;
   object-position: bottom;
-  height: 100vh;
 }
 
 #main-visual .txt-box {
@@ -332,23 +331,19 @@
 }
 
 #main-visual .txt-box p {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70%;
-  line-height: 2;
+  margin-bottom: 10px;
 }
 
 #main-visual .txt-box .more {
   margin-top: 200px;
 }
 
-.more {
+#main-visual .txt-box .more {
   width: 90%;
   margin: 40px auto;
 }
 
-.more-btn {
+#main-visual .txt-box .more-btn {
   width: 130px;
   height: 40px;
   padding: 10px 25px;
@@ -364,11 +359,11 @@
   color: #fff;
 }
 
-.more-btn:hover {
+#main-visual .txt-box .more-btn:hover {
   color: #000;
 }
 
-.more-btn:after {
+#main-visual .txt-box .more-btn:after {
   position: absolute;
   content: " ";
   top: 0;
@@ -381,24 +376,24 @@
   border-radius: 40px;
 }
 
-.more-btn:hover:after {
+#main-visual .txt-box .more-btn:hover:after {
   background: #fff;
   transform: scale(1.05);
 }
 
-.scroll-downs{
+#main-visual .scroll-downs{
   position: absolute;
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.scroll-downs p{
+#main-visual .scroll-downs p{
   color: #fff;
   font-size: 16px;
 }
 
-.scroll-downs p::after{
+#main-visual .scroll-downs p::after{
   display: block;
   content: "";
   border: 1px solid #fff;
@@ -411,11 +406,11 @@
   margin-top: 10px;
 }
 
-.scroll-downs a {
+#main-visual .scroll-downs a {
   display: block;
   padding-top: 70px;
 }
-.scroll-downs a span {
+#main-visual .scroll-downs a span {
   position: absolute;
   top: 50px;
   left: 50%;
@@ -557,8 +552,6 @@
   }
   
   #main-visual .txt-box p {
-    width: 70%;
-    line-height: 2;
     font-size: 16px;
   }
 
