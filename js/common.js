@@ -168,15 +168,36 @@ $(document).ready(function () { //start
 
 	})
 
-   var swiper = new Swiper(".business", {
-      slidesPerView: 1.3,
-      spaceBetween: 1,
-      centeredSlides: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
+
+
+  var ww = $(window).width();
+  var mySwiper = undefined;
+  
+  function initSwiper() {
+  
+    if (ww < 768 && mySwiper == undefined) {
+      mySwiper = new Swiper(".business", {
+        slidesPerView: 1.5,
+        spaceBetween: 0,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    } else if (ww >= 768 && mySwiper != undefined) {
+      mySwiper.destroy();
+      mySwiper = undefined;
+    }
+  }
+  
+  initSwiper();
+  
+  $(window).on('resize', function () {
+    ww = $(window).width();
+    initSwiper();
+  });
+
+
 
 
 
