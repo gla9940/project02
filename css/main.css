@@ -1489,8 +1489,11 @@ footer .sns ul li:nth-child(4) a {
 }
 
 
-
 /*intro 끝*/
+
+#sub-wrap .sv02 {
+  background: url(../img/sub_business.jpg)no-repeat center / cover;
+}
 
 
 
